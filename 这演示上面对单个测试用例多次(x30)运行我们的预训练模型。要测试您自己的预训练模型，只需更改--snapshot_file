@@ -1,0 +1,5 @@
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 10 \
+    --push_rewards --experience_replay --explore_rate_decay \
+    --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/test-10-obj-07.txt' \
+    --load_snapshot --snapshot_file 'YOUR-SNAPSHOT-FILE-HERE' \
+    --save_visualizations
