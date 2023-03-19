@@ -1,0 +1,6 @@
+---@class HelloWorld
+local HelloWorld = GameObject();
+
+function HelloWorld:init() -- Called when object is created
+  print("Hello World");
+end
