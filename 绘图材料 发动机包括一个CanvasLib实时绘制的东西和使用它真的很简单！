@@ -1,0 +1,36 @@
+---@class PongScoreboard
+local PongScoreboard = GameObject();
+
+function PongScoreboard:init()
+  local canvas = obe.canvas.Canvas(400, 400); -- Creating a 400x400 canvas
+
+  canvas:Rectangle("background") { -- Dark grey background
+      layer = 2, x = 0, y = 0, width = 250, height = 100,
+      color = { r = 50, g = 50, b = 50},
+  };
+
+  canvas:Text("firstPlayer") { -- First player's score label
+      text = "Player 1 : 0 points", size = 22
+  };
+
+  canvas:Text("secondPlayer") { -- Second player's score label
+      text = "Player 2 : 0 points", size = 22, y = 50
+  };
+
+  canvas:Circle("green") { -- Small green circle
+      color = "0F0", -- Green color
+      radius = 7, x = 200, y = 5
+  };
+
+  canvas:Circle("yellow") { -- Small yellow circle
+      color = "FF0", -- Yellow color
+      radius = 7, x = 217, y = 5
+  };
+
+  canvas:Circle("red") { -- Small red circle
+      color = "F00", -- Red color
+      radius = 7, x = 234, y = 5
+  };
+
+  canvas:render(self.components.Sprite); -- Drawing all the stuff !
+end
