@@ -1,0 +1,5 @@
+<!-- load the ES6 module bundle of melonJS v10.0 -->
+<script type="module" src="https://esm.run/melonjs@10.0"></script>
+<!-- omit the version completely to get the latest one -->
+<!-- you should NOT use this in production -->
+<script type="module" src="https://esm.run/melonjs"></script>
