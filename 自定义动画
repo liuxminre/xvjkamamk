@@ -1,0 +1,19 @@
+depth
+     .animate()
+     .reduce(oldFragment, new ReduceConfiguration()
+             .setRotationZ(0f)
+             .setRotationX(30f)
+             .setDuration(1000)
+     )
+
+     .exit(oldFragment, new ExitConfiguration()
+             .setFinalXPercent(0f)
+             .setFinalYPercent(-1f)
+     )
+     .enter(newFragment, new EnterConfiguration()
+             .setInitialXPercent(0f)
+             .setInitialYPercent(1f)
+             .setInitialRotationZ(0f)
+             .setInitialRotationX(30f)
+     )
+     .start();
