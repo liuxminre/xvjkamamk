@@ -1,0 +1,53 @@
+   cdt package
+   |
+   |- independence
+   |  |- graph (Infering the skeleton from data)
+   |  |  |- Lasso variants (Randomized Lasso[1], Glasso[2], HSICLasso[3])
+   |  |  |- FSGNN (CGNN[12] variant for feature selection)
+   |  |  |- Skeleton recovery using feature selection algorithms (RFECV[5], LinearSVR[6], RRelief[7], ARD[8,9], DecisionTree)
+   |  |
+   |  |- stats (pairwise methods for dependency)
+   |     |- Correlation (Pearson, Spearman, KendallTau)
+   |     |- Kernel based (NormalizedHSIC[10])
+   |     |- Mutual information based (MIRegression, Adjusted Mutual Information[11], Normalized mutual information[11])
+   |
+   |- data
+   |  |- CausalPairGenerator (Generate causal pairs)
+   |  |- AcyclicGraphGenerator (Generate FCM-based graphs)
+   |  |- load_dataset (load standard benchmark datasets)
+   |
+   |- causality
+   |  |- graph (methods for graph inference)
+   |  |  |- CGNN[12]
+   |  |  |- PC[13]
+   |  |  |- GES[13]
+   |  |  |- GIES[13]
+   |  |  |- LiNGAM[13]
+   |  |  |- CAM[13]
+   |  |  |- GS[23]
+   |  |  |- IAMB[24]
+   |  |  |- MMPC[25]
+   |  |  |- SAM[26]
+   |  |  |- CCDr[27]
+   |  |
+   |  |- pairwise (methods for pairwise inference)
+   |     |- ANM[14] (Additive Noise Model)
+   |     |- IGCI[15] (Information Geometric Causal Inference)
+   |     |- RCC[16] (Randomized Causation Coefficient)
+   |     |- NCC[17] (Neural Causation Coefficient)
+   |     |- GNN[12] (Generative Neural Network -- Part of CGNN )
+   |     |- Bivariate fit (Baseline method of regression)
+   |     |- Jarfo[20]
+   |     |- CDS[20]
+   |     |- RECI[28]
+   |
+   |- metrics (Implements the metrics for graph scoring)
+   |  |- Precision Recall
+   |  |- SHD
+   |  |- SID [29]
+   |
+   |- utils
+      |- Settings -> SETTINGS class (hardware settings)
+      |- loss -> MMD loss [21, 22] & various other loss functions
+      |- io -> for importing data formats
+      |- graph -> graph utilities
