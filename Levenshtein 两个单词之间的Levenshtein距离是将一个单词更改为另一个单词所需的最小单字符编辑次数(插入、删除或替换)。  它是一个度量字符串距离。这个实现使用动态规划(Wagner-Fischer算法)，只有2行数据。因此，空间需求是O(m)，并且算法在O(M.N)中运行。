@@ -1,0 +1,6 @@
+from strsimpy.levenshtein import Levenshtein
+
+levenshtein = Levenshtein()
+print(levenshtein.distance('My string', 'My $string'))
+print(levenshtein.distance('My string', 'My $string'))
+print(levenshtein.distance('My string', 'My $string'))
