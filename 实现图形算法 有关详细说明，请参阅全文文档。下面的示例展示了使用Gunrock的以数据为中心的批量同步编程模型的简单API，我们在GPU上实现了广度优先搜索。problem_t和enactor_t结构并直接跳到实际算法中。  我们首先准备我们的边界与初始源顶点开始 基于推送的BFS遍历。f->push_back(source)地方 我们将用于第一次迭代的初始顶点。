@@ -1,0 +1,6 @@
+git clone https://github.com/gunrock/gunrock.git
+cd gunrock
+mkdir build && cd build
+cmake .. 
+make sssp # or for all algorithms, use: make -j$(nproc)
+bin/sssp ../datasets/chesapeake/chesapeake.mtx
